@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - SBA BAJA</title>
+    <link rel="icon" type="image/x-icon" href="sbaprofil.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="sbaprofil.jpeg" alt="Logo SBA">
+                <span>SBA BAJA</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Produk</a></li>
+                <li><a href="pengiriman.html">Pengiriman</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- DETAIL LAYOUT WRAPPER -->
+    <div class="detail-page-wrapper">
+        
+        <!-- LEFT COLUMN: CONTENT DETIL -->
+        <main class="detail-main-content">
+            <a href="katalog.html" class="btn-back-katalog"><i class="fa-solid fa-arrow-left"></i> Kembali ke Katalog</a>
+            
+            <div class="detail-product-layout">
+                <div class="detail-img-box">
+                    <img id="detail-img" src="sbaprofil.jpeg" alt="Gambar Produk">
+                </div>
+                <div class="detail-text-box">
+                    <h2 id="detail-title">Nama Produk</h2>
+                    <p id="detail-desc" class="product-description">Deskripsi produk akan muncul di sini secara otomatis berdasarkan pilihan Anda di katalog.</p>
+                    
+                    <div class="spec-table-box">
+                        <h3>Spesifikasi Standar</h3>
+                        <table class="spec-table">
+                            <tr><td>Kondisi</td><td>Baru & Standar SNI</td></tr>
+                            <tr><td>Kategori</td><td id="detail-cat">Material Bangunan</td></tr>
+                            <tr><td>Pengiriman</td><td>Langsung Armada Gudang SBA</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- RIGHT COLUMN: SIDEBAR CARD AD -->
+        <aside class="detail-sidebar-ad">
+            <div class="card-ad">
+                <div class="ad-badge">PROMO</div>
+                <h3>Butuh Ukuran Kustom / Pembelian Partai Besar?</h3>
+                <p>Dapatkan harga khusus grosir langsung dari distributor utama. Konsultasikan kebutuhan proyek baja dan plafon Anda bersama sales ahli kami secara gratis!</p>
+                <a href="#" id="ad-wa-link" target="_blank" class="btn-ad-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Admin
+                </a>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p class="copyright">© 2026 TeguhMF. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AUTOMATIC PRODUCT DETECTOR SCRIPT -->
+    <script>
+        const productsData = {
+            'alderon': { title: 'ALDERON', img: 'alderon.png', cat: 'Atap Premium', desc: 'Atap Alderon adalah pionir atap gelombang berongga berbahan PVC yang dilengkapi dengan formula pelindung UV. Sangat efektif meredam panas udara luar serta suara bising air hujan, membuat ruangan di bawahnya tetap sejuk, teduh, dan nyaman tanpa perlu insulasi tambahan.' },
+            'bajaringan': { title: 'BAJA RINGAN', img: 'bajaringan.png', cat: 'Rangka Konstruksi', desc: 'Material baja ringan mutu tinggi berkualitas tinggi yang dirancang khusus untuk efisiensi perakitan struktur rangka atap bangunan. Tahan karat, tahan rayap, sangat ringan namun memiliki kekuatan tarikan struktural yang sangat kokoh untuk jangka panjang.' },
+            'listpvc': { title: 'LIST PVC', img: 'listpvc.png', cat: 'Aksesoris Plafon', desc: 'List Profil PVC berfungsi optimal sebagai bingkai penutup celah sambungan siku antara permukaan plafon dengan dinding interior. Membuat hasil akhir pemasangan plafon PVC toko Anda terlihat jauh lebih rapi, mewah, bersih, dan estetik.' },
+            'pvc': { title: 'PLAFON PVC', img: 'pvc.png', cat: 'Interior Plafon', desc: 'Plafon modern masa kini terbuat dari bahan Polyvinyl Chloride berkualitas tinggi. Keunggulan utamanya adalah mutlak anti air (tidak akan lapuk karena kebocoran), anti rayap, tidak merambatkan api saat terjadi korsleting, serta tersedia dalam berbagai corak motif mewah.' },
+            'spandek-pasir': { title: 'SPANDEK PASIR', img: 'spandek pasir.png', cat: 'Atap Bangunan', desc: 'Atap Zincalume Spandek yang permukaannya dilapisi oleh batuan pasir saringan khusus berlem perekat kuat. Lapisan pasir ini berfungsi krusial sebagai peredam alami suara rintik hujan serta menahan paparan terik sinar matahari langsung agar tidak tembus ke dalam bangunan.' },
+            'spandek': { title: 'SPANDEK', img: 'spandek.png', cat: 'Atap Bangunan', desc: 'Atap gelombang kontemporer berbahan perpaduan seng aluminium pilihan. Memiliki durabilitas yang sangat tinggi, bobot struktural ringan untuk mempermudah beban rangka, ekonomis, serta sangat populer diaplikasikan pada atap pabrik, pergudangan, maupun kanopi rumah.' },
+            'wallboardpvc': { title: 'WALLBOARD PVC', img: 'wallboardpvc.png', cat: 'Dekorasi Dinding', desc: 'Panel pelapis dinding internal praktis berteknologi PVC modern. Menjadi solusi alternatif terbaik pengganti wallpaper kain atau cat dinding konvensional karena sangat mudah dibersihkan dari noda, anti lembab, dan memberikan impresi ruangan yang eksklusif.' },
+            'wfc': { title: 'WFC / WIDE FLANGE', img: 'wfc.png', cat: 'Baja Berat', desc: 'Baja Profil I-Beam / Wide Flange (WF) merupakan salah satu material baja struktural paling vital dan kokoh untuk kebutuhan konstruksi bangunan skala besar. Memiliki kekuatan tekan dan kekuatan tarik yang sangat tinggi untuk menyangga balok beton berat.' }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const prodKey = urlParams.get('prod') || 'alderon';
+        const currentProd = productsData[prodKey] || productsData['alderon'];
+
+        document.getElementById('detail-title').innerText = currentProd.title;
+        document.getElementById('detail-img').src = currentProd.img;
+        document.getElementById('detail-img').alt = currentProd.title;
+        document.getElementById('detail-cat').innerText = currentProd.cat;
+        document.getElementById('detail-desc').innerText = currentProd.desc;
+        document.title = currentProd.title + " - SBA BAJA";
+
+        document.getElementById('ad-wa-link').href = `https://wa.me/6287849456328?text=Halo%20Admin%20SBA%20Baja,%20saya%20tertarik%20dan%20ingin%20konsultasi%20mengenai%20produk%20${encodeURIComponent(currentProd.title)}.`;
+    </script>
+</body>
+</html>
